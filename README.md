@@ -69,6 +69,13 @@ Az adminisztrátor és az alap szolgáltatások az első indításkor automatiku
 
 ## Adatbázis visszaállítása
 
+## Csapattagok
+
+- Dézsi Péter
+- Dézsi Richárd
+
+A projekt szoftverfejlesztő vizsgaremekként készült.
+
 A `reset-database.bat` törli a futás közben létrejött SQLite adatbázist. A következő indításkor a program automatikusan létrehozza újra.
 
 ## Dokumentáció
