@@ -92,3 +92,18 @@ A `Documents` mappában található a projektdokumentáció és a felhasználói
 ## Indítás
 
 A projekt Windows alatt a `start.bat` fájllal indítható el.
+
+## Tesztelés
+
+A program működését manuális teszteléssel is ellenőriztük.
+
+A tesztelés során többek között az alábbi funkciókat vizsgáltuk:
+
+- felhasználói regisztráció és bejelentkezés,
+- autó hozzáadása, módosítása és törlése,
+- szervizidőpont foglalása,
+- hibás vagy már foglalt időpont kezelése,
+- szolgáltatások kezelése adminisztrátorként,
+- felhasználói és adminisztrátori jogosultságok ellenőrzése.
+
+A backend API végpontjainak egy részét Swagger segítségével is teszteltük
