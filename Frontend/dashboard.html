@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vezérlőpult – SzervizPont</title>
+    <link rel="stylesheet" href="css/site.css">
+    <script defer src="js/api.js"></script>
+    <script defer src="js/dashboard.js"></script>
+</head>
+<body>
+<header>
+    <nav aria-label="Fő navigáció">
+        <span class="logo">SzervizPont</span>
+        <a href="index.html">Főoldal</a>
+        <a class="user-link hidden" href="dashboard.html">Vezérlőpult</a>
+        <a class="user-link hidden" href="cars.html">Autóim</a>
+        <a class="user-link hidden" href="appointments.html">Időpontok</a>
+        <a class="admin-link hidden" href="admin.html">Admin</a>
+        <a class="login-link" href="login.html">Belépés</a>
+        <a class="login-link" href="register.html">Regisztráció</a>
+        <button type="button" class="link-button logout-button user-link hidden">Kilépés</button>
+        <span id="navUserName" class="muted user-link hidden"></span>
+    </nav>
+</header>
+<main>
+    <section class="card">
+        <h1>Vezérlőpult</h1>
+        <div id="message" class="message"></div>
+        <p id="welcomeText" class="muted"></p>
+    </section>
+
+    <section class="grid">
+        <article class="card">
+            <h2 id="carCount">0</h2>
+            <p id="carLabel">Rögzített autó</p>
+            <a class="button" href="cars.html">Autók kezelése</a>
+        </article>
+        <article class="card">
+            <h2 id="appointmentCount">0</h2>
+            <p id="appointmentLabel">Saját időpont</p>
+            <a class="button" href="appointments.html">Időpontok kezelése</a>
+        </article>
+        <article class="card">
+            <h2 id="serviceCount">0</h2>
+            <p>Elérhető szolgáltatás</p>
+            <a class="button" href="appointments.html">Időpontfoglalás</a>
+        </article>
+    </section>
+</main>
+</body>
+</html>

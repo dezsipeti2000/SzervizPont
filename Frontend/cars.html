@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Autóim – SzervizPont</title>
+    <link rel="stylesheet" href="css/site.css">
+    <script defer src="js/api.js"></script>
+    <script defer src="js/cars.js"></script>
+</head>
+<body>
+<header>
+    <nav aria-label="Fő navigáció">
+        <span class="logo">SzervizPont</span>
+        <a href="index.html">Főoldal</a>
+        <a class="user-link hidden" href="dashboard.html">Vezérlőpult</a>
+        <a class="user-link hidden" href="cars.html">Autóim</a>
+        <a class="user-link hidden" href="appointments.html">Időpontok</a>
+        <a class="admin-link hidden" href="admin.html">Admin</a>
+        <a class="login-link" href="login.html">Belépés</a>
+        <a class="login-link" href="register.html">Regisztráció</a>
+        <button type="button" class="link-button logout-button user-link hidden">Kilépés</button>
+        <span id="navUserName" class="muted user-link hidden"></span>
+    </nav>
+</header>
+<main>
+    <section class="card">
+        <h1 id="carFormTitle">Új autó rögzítése</h1>
+        <div id="message" class="message"></div>
+        <form id="carForm">
+            <input id="carId" type="hidden" name="carId">
+            <div class="form-grid">
+                <div>
+                    <label for="plateNumber">Rendszám</label>
+                    <input id="plateNumber" type="text" name="plateNumber" placeholder="ABC-123" required minlength="5" maxlength="20">
+                </div>
+                <div>
+                    <label for="brand">Márka</label>
+                    <input id="brand" type="text" name="brand" placeholder="Suzuki" required minlength="2" maxlength="80">
+                </div>
+                <div>
+                    <label for="model">Modell</label>
+                    <input id="model" type="text" name="model" placeholder="Swift" required maxlength="80">
+                </div>
+                <div>
+                    <label for="year">Évjárat</label>
+                    <input id="year" type="number" name="year" min="1980" required>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button id="saveCarButton" type="submit">Autó mentése</button>
+                <button id="cancelCarEdit" type="button" class="secondary hidden">Mégse</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>Rögzített autóim</h2>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rendszám</th>
+                        <th>Márka</th>
+                        <th>Modell</th>
+                        <th>Évjárat</th>
+                        <th>Művelet</th>
+                    </tr>
+                </thead>
+                <tbody id="carsTable"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+</body>
+</html>

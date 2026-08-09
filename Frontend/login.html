@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Belépés – SzervizPont</title>
+    <link rel="stylesheet" href="css/site.css">
+    <script defer src="js/api.js"></script>
+    <script defer src="js/auth.js"></script>
+</head>
+<body>
+<header>
+    <nav aria-label="Fő navigáció">
+        <span class="logo">SzervizPont</span>
+        <a href="index.html">Főoldal</a>
+        <a class="user-link hidden" href="dashboard.html">Vezérlőpult</a>
+        <a class="user-link hidden" href="cars.html">Autóim</a>
+        <a class="user-link hidden" href="appointments.html">Időpontok</a>
+        <a class="admin-link hidden" href="admin.html">Admin</a>
+        <a class="login-link" href="login.html">Belépés</a>
+        <a class="login-link" href="register.html">Regisztráció</a>
+        <button type="button" class="link-button logout-button user-link hidden">Kilépés</button>
+        <span id="navUserName" class="muted user-link hidden"></span>
+    </nav>
+</header>
+<main>
+    <section class="card narrow">
+        <h1>Belépés</h1>
+        <div id="message" class="message"></div>
+        <form id="loginForm">
+            <div>
+                <label for="email">Email cím</label>
+                <input id="email" type="email" name="email" autocomplete="email" required maxlength="150">
+            </div>
+            <div>
+                <label for="password">Jelszó</label>
+                <input id="password" type="password" name="password" autocomplete="current-password" required>
+            </div>
+            <button type="submit">Belépés</button>
+        </form>
+        <p class="muted"></p>
+    </section>
+</main>
+</body>
+</html>

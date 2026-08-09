@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Időpontok – SzervizPont</title>
+    <link rel="stylesheet" href="css/site.css">
+    <script defer src="js/api.js"></script>
+    <script defer src="js/appointments.js"></script>
+</head>
+<body>
+<header>
+    <nav aria-label="Fő navigáció">
+        <span class="logo">SzervizPont</span>
+        <a href="index.html">Főoldal</a>
+        <a class="user-link hidden" href="dashboard.html">Vezérlőpult</a>
+        <a class="user-link hidden" href="cars.html">Autóim</a>
+        <a class="user-link hidden" href="appointments.html">Időpontok</a>
+        <a class="admin-link hidden" href="admin.html">Admin</a>
+        <a class="login-link" href="login.html">Belépés</a>
+        <a class="login-link" href="register.html">Regisztráció</a>
+        <button type="button" class="link-button logout-button user-link hidden">Kilépés</button>
+        <span id="navUserName" class="muted user-link hidden"></span>
+    </nav>
+</header>
+<main>
+    <section class="card">
+        <h1 id="appointmentFormTitle">Új időpont foglalása</h1>
+        <div id="message" class="message"></div>
+        <p id="noCarHelp" class="info-box hidden">Időpontfoglalás előtt rögzíts legalább egy autót az <a href="cars.html">Autóim</a> oldalon.</p>
+        <form id="appointmentForm">
+            <input id="appointmentId" type="hidden" name="appointmentId">
+            <div class="form-grid">
+                <div>
+                    <label for="carId">Autó</label>
+                    <select id="carId" name="carId" required></select>
+                </div>
+                <div>
+                    <label for="serviceItemId">Szolgáltatás</label>
+                    <select id="serviceItemId" name="serviceItemId" required></select>
+                </div>
+                <div>
+                    <label for="startAt">Kezdési időpont</label>
+                    <input id="startAt" type="datetime-local" name="startAt" required>
+                </div>
+                <div class="full-width">
+                    <label for="note">Megjegyzés</label>
+                    <textarea id="note" name="note" rows="3" maxlength="500"></textarea>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button id="saveAppointmentButton" type="submit">Időpont foglalása</button>
+                <button id="cancelAppointmentEdit" type="button" class="secondary hidden">Mégse</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>Időpontjaim</h2>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Időpont</th>
+                        <th>Autó</th>
+                        <th>Szolgáltatás</th>
+                        <th>Státusz</th>
+                        <th>Megjegyzés</th>
+                        <th>Művelet</th>
+                    </tr>
+                </thead>
+                <tbody id="appointmentsTable"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+</body>
+</html>

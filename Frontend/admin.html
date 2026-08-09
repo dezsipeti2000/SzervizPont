@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin – SzervizPont</title>
+    <link rel="stylesheet" href="css/site.css">
+    <script defer src="js/api.js"></script>
+    <script defer src="js/admin.js"></script>
+</head>
+<body>
+<header>
+    <nav aria-label="Fő navigáció">
+        <span class="logo">SzervizPont</span>
+        <a href="index.html">Főoldal</a>
+        <a class="user-link hidden" href="dashboard.html">Vezérlőpult</a>
+        <a class="user-link hidden" href="cars.html">Autóim</a>
+        <a class="user-link hidden" href="appointments.html">Időpontok</a>
+        <a class="admin-link hidden" href="admin.html">Admin</a>
+        <a class="login-link" href="login.html">Belépés</a>
+        <a class="login-link" href="register.html">Regisztráció</a>
+        <button type="button" class="link-button logout-button user-link hidden">Kilépés</button>
+        <span id="navUserName" class="muted user-link hidden"></span>
+    </nav>
+</header>
+<main>
+    <section class="card">
+        <h1>Adminisztráció</h1>
+        <div id="message" class="message"></div>
+        <p class="muted">A szolgáltatások, felhasználók és az összes foglalás kezelése.</p>
+    </section>
+
+    <section class="card">
+        <h2 id="serviceFormTitle">Új szolgáltatás</h2>
+        <form id="serviceForm">
+            <input id="serviceId" type="hidden" name="serviceId">
+            <div class="form-grid">
+                <div>
+                    <label for="serviceName">Név</label>
+                    <input id="serviceName" type="text" name="name" required minlength="3" maxlength="120">
+                </div>
+                <div>
+                    <label for="price">Ár (Ft)</label>
+                    <input id="price" type="number" name="price" min="0" max="10000000" required>
+                </div>
+                <div>
+                    <label for="estimatedMinutes">Időtartam percben</label>
+                    <input id="estimatedMinutes" type="number" name="estimatedMinutes" min="10" max="1440" required>
+                </div>
+                <div class="full-width">
+                    <label for="description">Leírás</label>
+                    <textarea id="description" name="description" rows="3" maxlength="500"></textarea>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button id="saveServiceButton" type="submit">Szolgáltatás mentése</button>
+                <button id="cancelServiceEdit" type="button" class="secondary hidden">Mégse</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>Szolgáltatások</h2>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Név</th><th>Leírás</th><th>Ár</th><th>Időtartam</th><th>Művelet</th></tr></thead>
+                <tbody id="servicesTable"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Felhasználók</h2>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Név</th><th>Email</th><th>Szerepkör</th></tr></thead>
+                <tbody id="usersTable"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Összes időpont</h2>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Időpont</th>
+                        <th>Ügyfél</th>
+                        <th>Autó</th>
+                        <th>Szolgáltatás</th>
+                        <th>Megjegyzés</th>
+                        <th>Státusz</th>
+                        <th>Művelet</th>
+                    </tr>
+                </thead>
+                <tbody id="adminAppointmentsTable"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+</body>
+</html>

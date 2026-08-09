@@ -1,0 +1,19 @@
+# Fordításkor létrejövő fájlok
+bin/
+obj/
+
+# Fejlesztői környezet
+.vs/
+.vscode/
+*.user
+*.suo
+
+# A futás közben létrejövő SQLite adatbázis és ideiglenes fájljai
+Database/*.db
+Database/*.db-shm
+Database/*.db-wal
+
+# Teszt és rendszerfájlok
+TestResults/
+*.coverage
+.DS_Store
