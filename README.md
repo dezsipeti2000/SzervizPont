@@ -68,6 +68,7 @@ dotnet run
 Az adminisztrátor és az alap szolgáltatások az első indításkor automatikusan létrejönnek.
 
 ## Adatbázis visszaállítása
+A `reset-database.bat` törli a futás közben létrejött SQLite adatbázist. A következő indításkor a program automatikusan létrehozza újra.
 
 ## Csapattagok
 
@@ -76,8 +77,18 @@ Az adminisztrátor és az alap szolgáltatások az első indításkor automatiku
 
 A projekt szoftverfejlesztő vizsgaremekként készült.
 
-A `reset-database.bat` törli a futás közben létrejött SQLite adatbázist. A következő indításkor a program automatikusan létrehozza újra.
 
 ## Dokumentáció
 
 A `Documents` mappában található a projektdokumentáció és a felhasználói dokumentáció.
+
+## Projekt felépítése
+
+- Frontend – a felhasználói felület HTML, CSS és JavaScript fájljai
+- Backend – az ASP.NET Core alkalmazás és az API
+- Database – az adatbázishoz kapcsolódó fájlok
+- Documents – a projekt dokumentációja
+
+## Indítás
+
+A projekt Windows alatt a `start.bat` fájllal indítható el.
