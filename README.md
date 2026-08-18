@@ -8,6 +8,7 @@ A SzervizPont egy autószervizhez készített időpontfoglaló webalkalmazás, a
 
 - Dézsi Péter – dezsipeti2000@gmail.com
 - Dézsi Richárd – dezsirichard29@gmail.com
+- Dézsi Tibor - dezsitibor21@gmail.com
 
 ## A repository felépítése
 
