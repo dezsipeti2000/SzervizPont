@@ -75,6 +75,7 @@ A `reset-database.bat` törli a futás közben létrejött SQLite adatbázist. A
 
 - Dézsi Péter
 - Dézsi Richárd
+- Dézsi Tibor
 
 A projekt szoftverfejlesztő vizsgaremekként készült.
 
